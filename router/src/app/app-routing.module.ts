@@ -17,7 +17,7 @@ const routes: Routes = [
         // when the user goes to http://localhost:4200/about/early-life display early-life component
          children: [
            {
-             path:'early-life',
+             path:'earlylife',
            component: EarlyLifeComponent
            },
            {
@@ -39,9 +39,11 @@ const routes: Routes = [
       }
 ];
 @NgModule({
-    imports:[RouterModule.forRoot(routes)],
+    imports:[RouterModule.forRoot(routes),
+    ],
     exports:[RouterModule]
 })
 
 // Need a class to export the module
 export class AppRoutingModule {}
+export const ArrayOfComponents = [EarlyLifeComponent, CareerComponent];
